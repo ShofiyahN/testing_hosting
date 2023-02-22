@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import Popup from "reactjs-popup";
 import 'reactjs-popup/dist/index.css';
 import moment from "moment/moment"; 
 import Swal from "sweetalert2";
@@ -31,14 +30,11 @@ function AppBarsRegis() {
               no-repeat
             `
           })
-    }
-  
 
-    
-
-    
-
-    
+        localStorage.getItem ('Name', name)
+        localStorage.getItem ('email', email)
+        localStorage.getItem ('birthday', birthday)
+    }   
     return (
         <div style={{width:'30%', height: '65vh', margin: 'auto', boxShadow: 'rgba(0, 0, 0, 0.24) 0px 3px 8px', borderRadius:'1%', marginTop:'2%' }}>
             <div style={{marginTop: '8%', display:"flex", flexDirection:"column", gap:"3%"}}>
@@ -57,6 +53,7 @@ function AppBarsRegis() {
 
             <button style={{width: "60%", height:"45px", margin:"auto", marginTop:"8%" , backgroundColor:"#716add", border: "1px solid lightgrey", borderRadius:"3%", display:"flex", alignItems:"center", textAlign:"center", justifyContent:"center" }} onClick={()=> handleRegis()}>Submit</button>
         </div>
+        
 
     )
 

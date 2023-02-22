@@ -4,17 +4,12 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 function AppBarsLogin() {
-
     const dataUser =
         {
             email: 'admin@importir.com',
             password: 'admin'
         }
-    
-
     const navigate = useNavigate()
-    
-
     const [email,setEmail]= useState('')
     const [password,setPassword]= useState('')
     const user = {email:email, password:password}
@@ -29,10 +24,8 @@ function AppBarsLogin() {
                 // confirmButtonText: '<a href="http://localhost:3000/home">Next</a>',
                 timer: 1500
               })
+              navigate('/home')          
 
-              navigate('/home')
-
-            
         } else{
             Swal.fire({
                 icon: 'error',
